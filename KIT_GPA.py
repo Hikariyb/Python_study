@@ -8,12 +8,27 @@
 
 num = int(input("科目数を入力してください"))
 
+def changer(grade):
+    if grade == 'S':
+        return 4
+    elif grade == 'A':
+        return 3
+    elif grade == 'B':
+        return 2
+    elif grade == 'C':
+        return 1
+    elif grade == 'D' and grade == 'F':
+        return 0
+    else:
+        print('不正な入力')
+
 for i in range(num):
     grade = str(input("成績を入力してください(ex.S,A,B..)"))
     credit = int(input("単位数を入力してください"))
-    is_pass = bool(input("合否科目かどうかを入力してください(True or False)"))
-
-
-
+    total_grade += grade * credit
+    total_credit += credit
+    
+GPA = total_grade / total_credit
+    
 
 
